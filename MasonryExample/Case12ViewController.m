@@ -29,7 +29,7 @@
     _animateView = [UIView new];
     
     [_animateView setBackgroundColor:[UIColor redColor]];
-    
+
     [self.view addSubview:_animateView];
     
     [_animateView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -39,7 +39,7 @@
         make.top.equalTo(self.view).with.offset(80);
     }];
     
-    //执行动画先让它绘制出来
+    //先根据初始化添加的约束生成最初的frame并显示view
     [self.view layoutIfNeeded];
     
     [UIView animateWithDuration:2.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -51,7 +51,7 @@
             make.top.equalTo(self.view).with.offset(80);
         }];
         
-        //去掉之后会没有动画效果
+        //更新约束  在某个时刻约束会被还原成frame使视图显示
         [self.view layoutIfNeeded];
         
     } completion:^(BOOL finished) {

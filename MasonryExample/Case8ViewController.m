@@ -23,19 +23,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self generateData];
+    
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.estimatedRowHeight = 80.0f;
 
     // 注册Cell
     [_tableView registerClass:[Case8Cell class] forCellReuseIdentifier:NSStringFromClass([Case8Cell class])];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-
-    [self generateData];
-    [_tableView reloadData];
 }
 
 #pragma mark - Case8CellDelegate

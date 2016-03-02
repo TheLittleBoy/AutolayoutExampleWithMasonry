@@ -47,9 +47,9 @@
     _contentLabel.text = entity.content;
 
     if (_entity.expanded) {
-        [_contentHeightConstraint uninstall];
+        [_contentHeightConstraint deactivate];
     } else {
-        [_contentHeightConstraint install];
+        [_contentHeightConstraint activate];
     }
 }
 
@@ -66,6 +66,7 @@
 
     // Title
     _titleLabel = [UILabel new];
+    _titleLabel.backgroundColor = [UIColor redColor];
     [self.contentView addSubview:_titleLabel];
 
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {

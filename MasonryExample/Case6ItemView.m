@@ -70,4 +70,12 @@
     return _baseView;
 }
 
+- (UIView *)viewForFirstBaselineLayout{
+    return _baseView;
+}
+
+- (UIView *)viewForLastBaselineLayout{
+    return _baseView;
+}
+
 @end
