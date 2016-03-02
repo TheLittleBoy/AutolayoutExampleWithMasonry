@@ -533,6 +533,33 @@
                                             <segue destination="SJQ-bG-3yE" kind="show" id="4Pe-iI-1Rx"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="v7x-hX-hor" detailTextLabel="uIG-tX-UcS" style="IBUITableViewCellStyleValue1" id="vWV-gv-VHZ">
+                                        <rect key="frame" x="0.0" y="548" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vWV-gv-VHZ" id="qo5-b9-ctM">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Case 12" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" id="v7x-hX-hor">
+                                                    <rect key="frame" x="15" y="12" width="58" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="动画" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uIG-tX-UcS">
+                                                    <rect key="frame" x="253" y="12" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Rns-v6-QMh" kind="show" id="av6-iK-ORP"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -682,7 +709,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9j5-sM-fNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="111" y="3276"/>
+            <point key="canvasLocation" x="64" y="3283"/>
+        </scene>
+        <!--动画-->
+        <scene sceneID="Rst-uB-M7A">
+            <objects>
+                <viewController title="动画" id="Rns-v6-QMh" customClass="Case12ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8wT-ap-M9k"/>
+                        <viewControllerLayoutGuide type="bottom" id="mR9-Gs-nED"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jno-5y-P00">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHy-R3-StD">
+                                <rect key="frame" x="99" y="501" width="122" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="KQJ-NY-rgH"/>
+                                    <constraint firstAttribute="width" constant="122" id="qQW-j8-naC"/>
+                                </constraints>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <action selector="back:" destination="Rns-v6-QMh" eventType="touchUpInside" id="LXj-P7-d8Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mR9-Gs-nED" firstAttribute="top" secondItem="bHy-R3-StD" secondAttribute="bottom" constant="33" id="WaI-sR-hDF"/>
+                            <constraint firstItem="bHy-R3-StD" firstAttribute="centerX" secondItem="Jno-5y-P00" secondAttribute="centerX" id="tLd-bO-QD1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bad-lW-0RU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="401" y="3283"/>
         </scene>
         <!--两种方式实现等间距-->
         <scene sceneID="L7H-hR-qPI">

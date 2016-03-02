@@ -12,7 +12,7 @@
 #import "Common.h"
 
 // 注释掉下面的宏定义，就是用“传统”的模板Cell计算高度
-//#define IOS_8_NEW_FEATURE_SELF_SIZING
+#define IOS_8_NEW_FEATURE_SELF_SIZING
 
 @interface Case4ViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
